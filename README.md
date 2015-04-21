@@ -1,7 +1,7 @@
-#devlogger
+# devlogger
 HTTP request logger middleware for node.js based on [morgan](https://www.npmjs.org/package/morgan)
 
-####USAGE
+#### USAGE
 
 	"use strict";
 
@@ -54,13 +54,13 @@ result
 	SERVER1 -> 10:45:42.220 GET > 304 > / - Mobile Safari 8.0 > iPhone > iOS 8.1 > 10.58.100.201
 	SERVER2 -> 10:45:44.415 GET > 200 > / - Mobile Safari 8.0 > iPhone > iOS 8.1 > 10.58.100.201
 	
-##Modifications
+## Modifications
 
-###Date format
+### Date format
 
 The :date token takes a pattern parameter and formats the date using [dateformat](https://www.npmjs.org/package/dateformat). 
 
-#####Example:
+##### Example:
 
 	logger( '-> :date[HH:MM:ss.l] :method > :status ...' );
 
@@ -68,17 +68,17 @@ result
 
 	-> 10:28:39.849 GET > 304 ...
 	
-###UA-parser
+### UA-parser
 
 Devlogger also benefits of using [ua-parser](https://www.npmjs.org/package/ua-parser)
 
-#####Tokens:
+##### Tokens:
 
 * :os
 * :browser
 * :device
 
-#####Example:
+##### Example:
 
 	logger( '-> :os > :device > :browser' )
 	
